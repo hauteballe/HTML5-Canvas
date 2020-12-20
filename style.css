@@ -40,21 +40,20 @@ body {
 }
 
 .menu-item:hover {
-  background-color: white;
   color: black;
 }
 
-.color-picker {
+/* .color-picker {
   background-color: lightseagreen;
   width: 22px;
   height: 22px;
   border-radius: 100px;
-}
+} */
 
 .menu-item i.fas {
   font-size: 30px;
 }
 
 #draw {
-  cursor: crosshair;
+  /* cursor: crosshair; */
 }

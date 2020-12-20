@@ -4,9 +4,26 @@
     <meta charset="UTF-8" />
     <title>HTML5 Canvas</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <canvas id="draw" width="800" height="800"></canvas>
+    <section class="draw-area">
+      <div class="menu">
+        <div class="clear menu-item" id="clear">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="color-picker menu-item"></div>
+        <div class="width-picker menu-item">
+          <i class="fas fa-pen"></i>
+        </div>
+      </div>
+      <canvas id="draw" width="850" height="450"></canvas>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>

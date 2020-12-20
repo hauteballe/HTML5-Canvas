@@ -47,3 +47,8 @@ canvas.addEventListener("mousedown", (elem) => {
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
+
+document.getElementById("clear").onclick = function () {
+  ctx.clearRect(0, 0, 950, 450);
+  ctx.beginPath();
+};

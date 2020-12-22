@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll(".menu input");
 let widthPicker = document.querySelector("#width-size");
 let colorPicker = document.querySelector("#color-panel");
 
-canvas.width = window.innerWidth;
+canvas.width = canvas.offsetWidth;
 canvas.clientHeight = window.innerHeight;
 
 context.strokeStyle = "#006EFF";

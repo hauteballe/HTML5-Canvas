@@ -7,23 +7,22 @@ let colorPicker = document.querySelector("#color-panel");
 canvas.width = canvas.offsetWidth;
 canvas.clientHeight = window.innerHeight;
 
-context.strokeStyle = "#006EFF";
 context.lineJoin = "round";
 context.lineCap = "round";
-context.lineWidth = 60;
 
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
 let direction = true;
 
+function updateCanvasStyles(strokeStyle, lineWidth) {
+  context.strokeStyle = strokeStyle;
+  context.lineWidth = lineWidth;
+}
+
 function draw(elem) {
   if (!isDrawing) return;
-  console.log(elem);
-
-  context.strokeStyle = colorPicker.value;
-  context.lineWidth = widthPicker.value;
-
+  updateCanvasStyles(colorPicker.value, widthPicker.value);
   context.beginPath();
   context.moveTo(lastX, lastY);
   context.lineTo(elem.offsetX, elem.offsetY);
@@ -45,3 +44,5 @@ document.getElementById("clear").onclick = function () {
   context.clearRect(0, 0, 950, 450);
   context.beginPath();
 };
+
+updateCanvasStyles("#006EFF", 60);

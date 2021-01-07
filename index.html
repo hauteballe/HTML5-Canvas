@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="draw-area">
+      <div class="menu">
+        <div class="clear menu-item" id="clear">
+          <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="color-picker menu-item">
+          <label id="color" for="color">
+            <input id="color-panel" type="color" name="color" value="#006EFF" />
+          </label>
+        </div>
+        <div class="width-picker menu-item">
+          <label id="width" for="width"
+            ><i class="fas fa-pen"></i>
+            <input
+              id="width-size"
+              type="range"
+              name="width"
+              min="2"
+              max="100"
+              value="10"
+              data-sizing="px"
+            />
+          </label>
+        </div>
+      </div>
+      <canvas id="draw" width="850" height="450"></canvas>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
